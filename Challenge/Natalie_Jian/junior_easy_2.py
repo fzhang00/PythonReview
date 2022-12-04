@@ -1,13 +1,13 @@
-with open("c2.txt", "r") as message1:
-    line = message1.readline()
+with open("c2.txt", "r") as f:
+    line = f.readline()
 
 num_of_messages = int(line[0])
 
-for i in range(num_of_messages):
-    message1.readline()
-    message2 = message2.strip("\n")
-    message3 = message2.split(" ")
-    whole_message = int(message3[0])*(message3[1])
+for i in range(1, num_of_messages):
+    input = line
+    input2 = input.strip("\n")
+    input3 = input2.split(" ")
+    output = int(input3[0])*(input3[1])
 
 # b1 = line[1]
 # b_strip = b1.strip("\n")
