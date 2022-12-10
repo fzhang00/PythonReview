@@ -19,9 +19,5 @@ if total > total2:
     print("The Apples have won the game!")
 elif total < total2:
     print("The Bananas have won the game!")
-elif total == total2:
+else:
     print("The game has been declared a tie!")
-
-str
-int
-float
