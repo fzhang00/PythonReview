@@ -1,14 +1,35 @@
 with open("c2.txt", "r") as f:
-    line = f.readline()
+    line = f.readlines()
 
 num_of_messages = int(line[0])
 
-for i in range(1, num_of_messages):
-    input = line
-    input2 = input.strip("\n")
-    input3 = input2.split(" ")
-    output = int(input3[0])*(input3[1])
+for i in range(1, num_of_messages+1):
+    input = line[i].strip("\n")
+    line2 = input.split(" ")
+    output = int(line2[0])*(line2[1])
+    print(output)
 
+for i in range(1, num_of_messages+1):
+        output2 = line[i].strip("\n")
+        output3 = output2.split(" ")
+        output4 = int(output3[0])*(output3[1])
+        written_output = list(output4)
+        with open("c2_output.txt", "w") as f:
+            f.writelines(written_output)
+
+# with open("c2_output.txt", "w") as f:
+#     f.writelines(written_output)
+
+# with open("your output text file.txt", 'w' ) as f:
+#     f.writelines(output_list)
+
+# This the list you supplies to f.writelines()
+# output_list = ['rgheos\n',  'osehgo\n', 'seothose']
+
+# This is what you get in output.txt
+# rgheos
+# osehgo
+# ....
 # b1 = line[1]
 # b_strip = b1.strip("\n")
 # b_line = b_strip.split(" ")
