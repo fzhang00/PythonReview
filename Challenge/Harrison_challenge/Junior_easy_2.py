@@ -13,9 +13,7 @@ for i in range(1, total_messages+1):
     output_file.append(result + "\n")
 
 with open("c2_output.txt", "w") as f:
-    for i in output_file:
-        final_result = open("c2_output.txt", "w")
-        final_result.writelines(output_file)
+    f.writelines(output_file)
 
 
 # Repeat for n times using for loop
