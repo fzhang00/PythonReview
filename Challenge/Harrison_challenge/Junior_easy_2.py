@@ -1,18 +1,21 @@
-with open("C2.txt", "r") as f:
+
+with open("c2.txt", "r") as f:
     line = f.readlines()
 
 total_messages = int(line[0])
+output_file = []
 
 for i in range(1, total_messages+1):
-    print(i)
-    input = line[i].strip("\n") #line[i] grabs the value at index i
-    input_b = input.split(" ")
-    total = int(input_b[0])*(input_b[1])
-    print(total)
-    written_total = list(total[i])
+    input = line[i].strip("\n")
+    input_2 = input.split(" ")
+    result = int(input_2[0])*(input_2[1])
+    print(result)
+    output_file.append(result + "\n")
 
-with open("Output_C2.txt", "w") as f:
-    f.writelines(written_total)
+with open("c2_output.txt", "w") as f:
+    for i in output_file:
+        final_result = open("c2_output.txt", "w")
+        final_result.writelines(output_file)
 
 
 # Repeat for n times using for loop
