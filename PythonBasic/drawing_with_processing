@@ -1,0 +1,24 @@
+from processing import *
+
+def setup():
+  size(400,500)
+  
+def draw():
+  w = 400
+  h = 500
+  f = 255
+  rectMode(CENTER)
+  fill(f, 0, 0)
+  rect(200, 250, w, h)
+  for i in range (0, 16):
+    noFill()
+    h = h - 20
+    w = w - 20
+    f = f - 17
+    fill(f, 0, 0)
+    rect(200,250, w, h)
+  line(0, 0, 200, 200)
+  line(400, 0, 200, 200)
+  line(0, 500, 250, 250)
+  line(400, 500, 150, 250)
+run()
